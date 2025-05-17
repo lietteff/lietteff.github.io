@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kazan Guide — Гид по Казани</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="sticky-header">
+    <nav>
+      <div class="logo">Kazan Guide</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Главная</a></li>
+        <li><a href="#places" class="nav-link">Куда сходить?</a></li>
+        <li><a href="#food" class="nav-link">Вкусно покушать</a></li>
+        <li><a href="#events" class="nav-link">Мероприятия</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Герой-секция -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать в Казань</h1>
+      <p>Откройте для себя столицу Татарстана</p>
+      <button id="colorizeBtn" class="cta-button">♡</button>
+    </div>
+  </section>
+
+  <!-- Куда сходить -->
+  <section id="places" class="section">
+    <div class="section-container">
+      <h2>Куда сходить?</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="dos">Достопримечательности</button>
+        <button class="filter-btn" data-filter="park">Парки</button>
+        <button class="filter-btn" data-filter="mesto">Интересные места</button>
+      </div>
+      <div class="cards-container" id="placesContainer"></div>
+    </div>
+  </section>
+
+  <!-- Где поесть -->
+  <section id="food" class="section alt-bg">
+    <div class="section-container">
+      <h2>Вкусно покушать</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="rest">Рестораны</button>
+        <button class="filter-btn" data-filter="bar">Бары</button>
+        <button class="filter-btn" data-filter="coffee">Кофейни</button>
+      </div>
+      <div class="cards-container" id="restaurantsContainer"></div>
+    </div>
+  </section>
+
+  <!-- Мероприятия -->
+  <section id="events" class="section">
+    <div class="section-container">
+      <h2>Мероприятия</h2>
+      <div class="cards-container" id="eventsContainer"></div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Kazan Guide. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <p id="modalDescription"></p>
+      <div class="modal-info">
+        <span id="modalAddress"></span>
+        <span id="modalHours"></span>
+        <span id="modalPrice"></span>
+      </div>
+      <div class="modal-rating" id="modalRating"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
